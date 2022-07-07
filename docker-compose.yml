@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+    php:
+        build:
+            context: ./
+            dockerfile: docker/Dockerfile
+        image: php:8.0-apache
+        extra_hosts:
+            - "referal.loc:127.0.0.1"
+        hostname: referal.loc
+        domainname: loc
+        container_name: referal-apache
+        ports:
+            - 85:80
+        volumes:
+            - ./:/var/www/referal
+    database:
+        image: mysql:8
+        command: --default-authentication-plugin=mysql_native_password
+        container_name: referal-mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_DATABASE=referal
+            - MYSQL_USER=referal
+            - MYSQL_PASSWORD=password
+        ports:
+            - 3311:3306
+
+#    phpmyadmin:
+#        image: phpmyadmin/phpmyadmin
+#        links:
+#            - database:database
+#        ports:
+#            - 8181:80
+#        environment:
+#            PMA_HOST: mysql
+#            MYSQL_USER: carwash
+#            MYSQL_ROOT_PASSWORD: password
