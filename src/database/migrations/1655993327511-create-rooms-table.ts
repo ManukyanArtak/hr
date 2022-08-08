@@ -15,6 +15,7 @@ export class createRoomsTable1655993327511 implements MigrationInterface {
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
           },
           {
             name: 'company_id',

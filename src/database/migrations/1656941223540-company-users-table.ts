@@ -15,6 +15,7 @@ export class companyUsersTable1656941223540 implements MigrationInterface {
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
           },
           {
             name: 'company_id',

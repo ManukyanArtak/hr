@@ -10,6 +10,7 @@ export class createUsersTable1655993299090 implements MigrationInterface {
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
           },
           {
             name: 'first_name',
@@ -22,15 +23,22 @@ export class createUsersTable1655993299090 implements MigrationInterface {
           {
             name: 'email',
             type: 'varchar',
+            isUnique: true,
+          },
+          {
+            name: 'password',
+            type: 'varchar',
           },
           {
             name: 'phone',
             type: 'varchar',
             length: '20',
+            default: null,
           },
           {
             name: 'position',
             type: 'varchar',
+            default: null,
           },
           {
             name: 'type',
@@ -40,6 +48,7 @@ export class createUsersTable1655993299090 implements MigrationInterface {
           {
             name: 'avatar',
             type: 'text',
+            default: null,
           },
           {
             name: 'created_at',

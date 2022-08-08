@@ -17,6 +17,7 @@ export class createNotificationsTable1655993397901
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
           },
           {
             name: 'company_id',

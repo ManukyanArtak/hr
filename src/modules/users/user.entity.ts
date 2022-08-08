@@ -51,7 +51,10 @@ export class User {
     default: UserType.ADMIN,
   })
   type: UserType;
-
+  @Column({
+    type: 'varchar',
+  })
+  avatar: string;
   @Column({
     type: 'timestamp',
   })

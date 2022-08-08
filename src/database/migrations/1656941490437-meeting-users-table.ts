@@ -15,6 +15,7 @@ export class meetingUsersTable1656941490437 implements MigrationInterface {
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
           },
           {
             name: 'meeting_id',

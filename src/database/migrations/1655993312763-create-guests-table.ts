@@ -15,6 +15,7 @@ export class createGuestsTable1655993312762 implements MigrationInterface {
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
           },
           {
             name: 'company_id',

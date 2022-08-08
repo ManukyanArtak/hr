@@ -10,6 +10,7 @@ export class createJobsTable1655993384260 implements MigrationInterface {
             name: 'id',
             type: 'int',
             isPrimary: true,
+            isGenerated: true,
           },
           {
             name: 'payload',

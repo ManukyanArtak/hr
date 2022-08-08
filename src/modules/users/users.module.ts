@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { UsersController } from './users.controller';
 import { UsersService } from './users.service';
-import { SequelizeModule } from '@nestjs/sequelize';
 import { User } from './user.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
@@ -9,5 +8,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   controllers: [UsersController],
   providers: [UsersService],
   imports: [TypeOrmModule.forFeature([User])],
+  exports: [UsersService],
 })
 export class UsersModule {}

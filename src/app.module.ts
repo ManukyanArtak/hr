@@ -12,6 +12,7 @@ import { RoomsModule } from './modules/rooms/rooms.module';
 import { JobsModule } from './modules/jobs/jobs.module';
 import { NotificationsService } from './modules/notifications/notifications.service';
 import { NotificationsModule } from './modules/notifications/notifications.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { NotificationsModule } from './modules/notifications/notifications.modul
     RoomsModule,
     JobsModule,
     NotificationsModule,
+    AuthModule,
   ],
   providers: [NotificationsService],
 })
